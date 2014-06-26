@@ -18,7 +18,7 @@ var MongoBackend = BaseBackend.extend(
         options = _.extend({}, MongoBackend.defaults, options || {});
         this.options = options;
 
-        this._db = new Db(options.database, new Server(options.host, options.port,  {auto_reconnect: true})/*, {native_parser:true}*/);
+        this._db = new Db(options.database, new Server(options.host, options.port, options)); //  {auto_reconnect: true})/*, {native_parser:true}*/);
 
         this._opened = null;
     },
