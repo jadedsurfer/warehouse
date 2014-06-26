@@ -44,11 +44,11 @@ function _applyRoutes(app, name, store) {
         respond(store.put(req.body, req.params.id), res);
     });
 
-    app.del(name, function(req, res) {
+    app.delete(name, function(req, res) {
         respond(store.clear(), res);
     });
 
-    app.del(name+'/:id', function(req, res) {
+    app.delete(name+'/:id', function(req, res) {
         respond(store.delete(req.params.id), res);
     });
 }
