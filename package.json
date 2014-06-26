@@ -12,16 +12,16 @@
     "rest",
     "rql"
   ],
-  "homepage": "http://github.com/dundalek/warehouse",
-  "author": "Jakub Dundalek <dundalek@gmail.com> (http://dundalek.com/)",
+  "homepage": "http://github.com/tbashor/warehouse",
+  "author": "Todd Bashor <jadedsurfer@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/dundalek/warehouse.git"
+    "url": "http://github.com/tbashor/warehouse.git"
   },
   "dependencies": {
     "q": "~0.9.7",
     "underscore": "~1.5.2",
-    "express": "~3.4.0",
+    "express": "^4.4.4",
     "underscore-data": "git://github.com/dundalek/underscore-data.git"
   },
   "devDependencies": {

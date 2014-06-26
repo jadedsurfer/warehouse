@@ -3,7 +3,7 @@
     var _;
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined' && typeof require !== 'undefined') {
         // CommonJS
-        _ = require('underscore')
+        _ = require('underscore');
         _.extend(module.exports, factory(_, require('express'), require('url')));
     } else {
         // running in browser
@@ -24,7 +24,7 @@ function respond(promise, res) {
 }
 
 function _applyRoutes(app, name, store) {
-    app.use(express.bodyParser());
+    //app.use(express.bodyParser());
 
     name = name.replace(/^\/?/, '/');
 
@@ -59,7 +59,7 @@ function applyRoutes(app, name, store) {
             // app, array of stores
             for (var i = 0; i < name.length; i++) {
                 _applyRoutes(app, name[i].name, name[i]);
-            };
+            }
         } else if (name.name && typeof name.get === 'function') {
             // app, store
             _applyRoutes(app, name.name, name);
